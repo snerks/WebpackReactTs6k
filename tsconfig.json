@@ -1,0 +1,11 @@
+﻿{
+    "compilerOptions": {
+        "module": "commonjs",
+        "sourceMap": true,
+        "jsx": "react"
+    },
+    "files": [
+        "src/sum.tsx",
+        "typings/tsd.d.ts"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "wp6k",
+  "version": "1.0.0",
+  "description": "Webpack Typescript React Testing with Karma",
+  "main": "bundle.js",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-addons-test-utils": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-global": "^0.1.8"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.16",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "typescript": "^1.7.5",
+    "ts-loader": "^0.7.2",
+    "ts-jsx-loader": "^0.2.1"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
