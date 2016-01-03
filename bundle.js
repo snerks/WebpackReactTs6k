@@ -52,7 +52,7 @@
 	var ReactDOM = __webpack_require__(158);
 	var TestUtils = __webpack_require__(159);
 	var sum_1 = __webpack_require__(161);
-	xdescribe("Sample", function () {
+	describe("Sample", function () {
 	    var sut = undefined;
 	    beforeEach(function () {
 	        var sampleProps = { name: "World" };
@@ -20197,7 +20197,7 @@
 	exports.Sample = Sample;
 	exports.NameView = function (props) { return React.createElement("div", {"className": "nameView"}, "Hello, ", props.name); };
 	// export const NameView: any = ({name}) => <div className="nameView">Hello, {name}</div>;
-	//# sourceMappingURL=sum.js.map
+
 
 /***/ }
 /******/ ]);

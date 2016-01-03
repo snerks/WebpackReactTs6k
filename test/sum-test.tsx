@@ -10,7 +10,7 @@ import * as TestUtils from "react-addons-test-utils";
 
 import {Sample, SampleProps, NameView} from "../src/sum";
 
-xdescribe("Sample", () => {
+describe("Sample", () => {
 
     let sut: Sample = undefined;
 
