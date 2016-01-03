@@ -6,7 +6,7 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var TestUtils = require("react-addons-test-utils");
 var sum_1 = require("../src/sum");
-describe("Sample", function () {
+xdescribe("Sample", function () {
     var sut = undefined;
     beforeEach(function () {
         var sampleProps = { name: "World" };
@@ -32,5 +32,23 @@ describe("Sample", function () {
         var reactElement = shallowRenderer.getRenderOutput();
         console.log(reactElement.type);
         expect(reactElement.type).toBe("div");
+    });
+});
+describe("NameView", function () {
+    it("should render the correct className", function () {
+        var sampleProps = { name: "World" };
+        var shallowRenderer = TestUtils.createRenderer();
+        shallowRenderer.render(React.createElement(sum_1.NameView, React.__spread({}, sampleProps)));
+        var reactElement = shallowRenderer.getRenderOutput();
+        var reactElementProps = reactElement.props;
+        expect(reactElementProps.className).toBe("nameView");
+    });
+    it("should render the name property as text content", function () {
+        var sampleProps = { name: "World" };
+        var shallowRenderer = TestUtils.createRenderer();
+        shallowRenderer.render(React.createElement(sum_1.NameView, React.__spread({}, sampleProps)));
+        var reactElement = shallowRenderer.getRenderOutput();
+        var reactElementChildren = reactElement.props.children;
+        expect(reactElementChildren[1]).toBe("World");
     });
 });

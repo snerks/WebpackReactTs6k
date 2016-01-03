@@ -15,3 +15,6 @@ var Sample = (function (_super) {
     return Sample;
 })(React.Component);
 exports.Sample = Sample;
+exports.NameView = function (props) { return React.createElement("div", {"className": "nameView"}, "Hello, ", props.name); };
+// export const NameView: any = ({name}) => <div className="nameView">Hello, {name}</div>;
+//# sourceMappingURL=sum.js.map

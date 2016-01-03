@@ -8,9 +8,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as TestUtils from "react-addons-test-utils";
 
-import {Sample, SampleProps} from "../src/sum";
+import {Sample, SampleProps, NameView} from "../src/sum";
 
-describe("Sample", () => {
+xdescribe("Sample", () => {
 
     let sut: Sample = undefined;
 
@@ -52,4 +52,34 @@ describe("Sample", () => {
 
         expect(reactElement.type).toBe("div");
     });
+});
+
+describe("NameView", () => {
+
+    it("should render the correct className", () => {
+        let sampleProps: SampleProps = { name: "World" };
+
+        const shallowRenderer: React.ShallowRenderer = TestUtils.createRenderer();
+        shallowRenderer.render(<NameView {...sampleProps} />);
+
+        const reactElement: any = shallowRenderer.getRenderOutput();
+
+        const reactElementProps: any = reactElement.props;
+
+        expect(reactElementProps.className).toBe("nameView");
+    });
+
+    it("should render the name property as text content", () => {
+        let sampleProps: SampleProps = { name: "World" };
+
+        const shallowRenderer: React.ShallowRenderer = TestUtils.createRenderer();
+        shallowRenderer.render(<NameView {...sampleProps} />);
+
+        const reactElement: React.ReactElement<any> = shallowRenderer.getRenderOutput();
+
+        const reactElementChildren: any = reactElement.props.children;
+
+        expect(reactElementChildren[1]).toBe("World");
+    });
+
 });

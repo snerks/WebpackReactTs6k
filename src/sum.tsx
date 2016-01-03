@@ -11,3 +11,6 @@ export class Sample extends React.Component<SampleProps, {}> {
             );
     }
 }
+
+export const NameView: any = (props: SampleProps) => <div className="nameView">Hello, {props.name}</div>;
+// export const NameView: any = ({name}) => <div className="nameView">Hello, {name}</div>;
