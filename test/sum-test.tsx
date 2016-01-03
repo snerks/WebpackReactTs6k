@@ -8,18 +8,16 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as TestUtils from "react-addons-test-utils";
 
-// import Sample = require("./sum");
-import sum = require("../src/sum");
+import {Sample, SampleProps} from "../src/sum";
 
 describe("Sample", () => {
 
-    // let component: React.Component<any, any> = undefined;
-    let sut: sum.Sample = undefined;
+    let sut: Sample = undefined;
 
     beforeEach(() => {
-        let sampleProps: sum.SampleProps = { name: "World" };
+        let sampleProps: SampleProps = { name: "World" };
 
-        sut = TestUtils.renderIntoDocument(<sum.Sample {...sampleProps} />);
+        sut = TestUtils.renderIntoDocument(<Sample {...sampleProps} />);
     });
 
     it("renders correct text", () => {
@@ -30,10 +28,10 @@ describe("Sample", () => {
     });
 
     it("renders correct className", () => {
-        let sampleProps: sum.SampleProps = { name: "World" };
+        let sampleProps: SampleProps = { name: "World" };
 
         const shallowRenderer: React.ShallowRenderer = TestUtils.createRenderer();
-        shallowRenderer.render(<sum.Sample {...sampleProps} />);
+        shallowRenderer.render(<Sample {...sampleProps} />);
 
         const reactElement: any = shallowRenderer.getRenderOutput();
 
@@ -43,10 +41,10 @@ describe("Sample", () => {
     });
 
     it("renders correct HTML Element", () => {
-        let sampleProps: sum.SampleProps = { name: "World" };
+        let sampleProps: SampleProps = { name: "World" };
 
         const shallowRenderer: React.ShallowRenderer = TestUtils.createRenderer();
-        shallowRenderer.render(<sum.Sample {...sampleProps} />);
+        shallowRenderer.render(<Sample {...sampleProps} />);
 
         const reactElement: React.ReactElement<any> = shallowRenderer.getRenderOutput();
 

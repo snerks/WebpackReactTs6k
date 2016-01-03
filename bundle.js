@@ -51,14 +51,12 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 	var TestUtils = __webpack_require__(159);
-	// import Sample = require("./sum");
-	var sum = __webpack_require__(161);
+	var sum_1 = __webpack_require__(161);
 	describe("Sample", function () {
-	    // let component: React.Component<any, any> = undefined;
 	    var sut = undefined;
 	    beforeEach(function () {
 	        var sampleProps = { name: "World" };
-	        sut = TestUtils.renderIntoDocument(React.createElement(sum.Sample, React.__spread({}, sampleProps)));
+	        sut = TestUtils.renderIntoDocument(React.createElement(sum_1.Sample, React.__spread({}, sampleProps)));
 	    });
 	    it("renders correct text", function () {
 	        var domNode = ReactDOM.findDOMNode(sut);
@@ -68,7 +66,7 @@
 	    it("renders correct className", function () {
 	        var sampleProps = { name: "World" };
 	        var shallowRenderer = TestUtils.createRenderer();
-	        shallowRenderer.render(React.createElement(sum.Sample, React.__spread({}, sampleProps)));
+	        shallowRenderer.render(React.createElement(sum_1.Sample, React.__spread({}, sampleProps)));
 	        var reactElement = shallowRenderer.getRenderOutput();
 	        var reactElementProps = reactElement.props;
 	        expect(reactElementProps.className).toBe("BINGO");
@@ -76,7 +74,7 @@
 	    it("renders correct HTML Element", function () {
 	        var sampleProps = { name: "World" };
 	        var shallowRenderer = TestUtils.createRenderer();
-	        shallowRenderer.render(React.createElement(sum.Sample, React.__spread({}, sampleProps)));
+	        shallowRenderer.render(React.createElement(sum_1.Sample, React.__spread({}, sampleProps)));
 	        var reactElement = shallowRenderer.getRenderOutput();
 	        console.log(reactElement.type);
 	        expect(reactElement.type).toBe("div");
@@ -20179,7 +20177,6 @@
 	    return Sample;
 	})(React.Component);
 	exports.Sample = Sample;
-	// export = Sample;
 
 
 /***/ }

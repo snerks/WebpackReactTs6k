@@ -15,4 +15,3 @@ var Sample = (function (_super) {
     return Sample;
 })(React.Component);
 exports.Sample = Sample;
-// export = Sample;

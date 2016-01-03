@@ -11,5 +11,3 @@ export class Sample extends React.Component<SampleProps, {}> {
             );
     }
 }
-
-// export = Sample;
