@@ -8,6 +8,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as TestUtils from "react-addons-test-utils";
 
+import * as ReactDOMServer from "react-dom/server";
+
 import {Sample, SampleProps, NameView} from "../src/sum";
 
 describe("Sample", () => {
@@ -80,6 +82,14 @@ describe("NameView", () => {
         const reactElementChildren: any = reactElement.props.children;
 
         expect(reactElementChildren[1]).toBe("World");
+    });
+
+    it("should render the name property within text content", () => {
+        let sampleProps: SampleProps = { name: "World" };
+
+        const renderedString: string = ReactDOMServer.renderToStaticMarkup(<NameView {...sampleProps} />);
+
+        expect(renderedString).toBe("<div class=\"nameView\">Hello, World</div>");
     });
 
 });

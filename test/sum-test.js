@@ -5,6 +5,7 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
 var TestUtils = require("react-addons-test-utils");
+var ReactDOMServer = require("react-dom/server");
 var sum_1 = require("../src/sum");
 describe("Sample", function () {
     var sut = undefined;
@@ -50,5 +51,10 @@ describe("NameView", function () {
         var reactElement = shallowRenderer.getRenderOutput();
         var reactElementChildren = reactElement.props.children;
         expect(reactElementChildren[1]).toBe("World");
+    });
+    it("should render the name property within text content", function () {
+        var sampleProps = { name: "World" };
+        var renderedString = ReactDOMServer.renderToStaticMarkup(React.createElement(sum_1.NameView, React.__spread({}, sampleProps)));
+        expect(renderedString).toBe("<div class=\"nameView\">Hello, World</div>");
     });
 });

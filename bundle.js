@@ -51,7 +51,8 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
 	var TestUtils = __webpack_require__(159);
-	var sum_1 = __webpack_require__(161);
+	var ReactDOMServer = __webpack_require__(161);
+	var sum_1 = __webpack_require__(162);
 	describe("Sample", function () {
 	    var sut = undefined;
 	    beforeEach(function () {
@@ -96,6 +97,11 @@
 	        var reactElement = shallowRenderer.getRenderOutput();
 	        var reactElementChildren = reactElement.props.children;
 	        expect(reactElementChildren[1]).toBe("World");
+	    });
+	    it("should render the name property within text content", function () {
+	        var sampleProps = { name: "World" };
+	        var renderedString = ReactDOMServer.renderToStaticMarkup(React.createElement(sum_1.NameView, React.__spread({}, sampleProps)));
+	        expect(renderedString).toBe("<div class=\"nameView\">Hello, World</div>");
 	    });
 	});
 
@@ -20176,6 +20182,15 @@
 
 /***/ },
 /* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	module.exports = __webpack_require__(148);
+
+
+/***/ },
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __extends = (this && this.__extends) || function (d, b) {
