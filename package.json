@@ -14,9 +14,10 @@
     "karma": "^0.13.16",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.6",
-    "typescript": "^1.7.5",
+    "ts-jsx-loader": "^0.2.1",
     "ts-loader": "^0.7.2",
-    "ts-jsx-loader": "^0.2.1"
+    "typescript": "^1.7.5",
+    "webpack": "^1.12.9"
   },
   "scripts": {
     "test": ""
